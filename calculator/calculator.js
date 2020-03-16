@@ -1,32 +1,20 @@
-function add () {
-	
-}
+const add = (...n) => n.reduce((r,e) => r += e, 0);
 
-function subtract () {
-	
-}
+const subtract = (n, m) => n - m;
 
-function sum () {
-	
-}
+const sum = n => add(...n);
 
-function multiply () {
-	
-}
+const multiply = n => n.reduce((r,e) => r *= e);
 
-function power() {
-	
-}
+const power = (base, exp) => exp === 1 ? base : base * power(base, --exp);
 
-function factorial() {
-	
-}
+const factorial = n => n < 2 ? 1 : n * factorial(--n);
 
 module.exports = {
 	add,
 	subtract,
 	sum,
 	multiply,
-    power,
+	power,
 	factorial
 }
